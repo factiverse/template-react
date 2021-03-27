@@ -1,41 +1,95 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Link from './link';
+import React from "react";
+import renderer from "react-test-renderer";
+import Link from "./link";
 
-test('Link changes the class when hovered', () => {
+test("Link changes the class when hovered", () => {
   const component = renderer.create(
     <Link page="http://www.facebook.com">Facebook</Link>
   );
   let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchInlineSnapshot(`
+    <a
+      className="normal"
+      href="http://www.facebook.com"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      Facebook
+    </a>
+  `);
 
   // manually trigger the callback
   tree.props.onMouseEnter();
   // re-rendering
   tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchInlineSnapshot(`
+    <a
+      className="hovered"
+      href="http://www.facebook.com"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      Facebook
+    </a>
+  `);
 
   // manually trigger the callback
   tree.props.onMouseLeave();
   // re-rendering
   tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchInlineSnapshot(`
+    <a
+      className="normal"
+      href="http://www.facebook.com"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      Facebook
+    </a>
+  `);
 });
 
-test('Empty link changes the class when hovered', () => {
+test("Empty link changes the class when hovered", () => {
   const component = renderer.create(<Link page="">Facebook</Link>);
   let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchInlineSnapshot(`
+    <a
+      className="normal"
+      href="#"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      Facebook
+    </a>
+  `);
 
   // manually trigger the callback
   tree.props.onMouseEnter();
   // re-rendering
   tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchInlineSnapshot(`
+    <a
+      className="hovered"
+      href="#"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      Facebook
+    </a>
+  `);
 
   // manually trigger the callback
   tree.props.onMouseLeave();
   // re-rendering
   tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchInlineSnapshot(`
+    <a
+      className="normal"
+      href="#"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      Facebook
+    </a>
+  `);
 });

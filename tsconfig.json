@@ -12,7 +12,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "typeRoots": [
+      "src/customTypings",
+      "node_modules/@types"
+    ]
   },
   "include": ["src", "../jest.config.js", "jest.config.js"]
 }
