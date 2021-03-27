@@ -1,0 +1,46 @@
+/* ----------------------------------------------
+ * abstracts/_global.scss
+ * Shortcut to import all files in /abstracts
+ * ---------------------------------------------- */
+/* ----------------------------------------------
+ * abstracts/_variables.scss
+ * Stores any repeatable property values
+ * ---------------------------------------------- */
+/* ----------------------------------------------
+ * abstracts/_functions.scss
+ * Stores any SASS functions which process and return a value
+ * ---------------------------------------------- */
+/* ----------------------------------------------
+ * abstracts/_mixins.scss
+ * Stores any repeatable block of code
+ * ---------------------------------------------- */
+/* ----------------------------------------------
+ * base/_global.scss
+ * Shortcut to import all files in /base
+ * ---------------------------------------------- */
+/* ----------------------------------------------
+ * base/_general.scss
+ * Stores overrides of global elements such as body
+ * ---------------------------------------------- */
+/* ----------------------------------------------
+ * base/_fonts.scss
+ * Stores all fonts used
+ * ---------------------------------------------- */
+/* ----------------------------------------------
+ * base/_animations.scss
+ * Stores @keyframe CSS animations
+ * ---------------------------------------------- */
+/* ----------------------------------------------
+ * base/_typography.scss
+ * Stores major typography element styles
+ * ---------------------------------------------- */
+/* ----------------------------------------------
+ * pages/_global.scss
+ * Shortcut to import all files in /pages
+ * ---------------------------------------------- */
+/* ----------------------------------------------
+ * pages/_editor.scss
+ * Stores CSS specific to the editor page
+ * ---------------------------------------------- */
+
+/*# sourceMappingURL=main.css.map */
