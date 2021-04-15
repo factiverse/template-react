@@ -42,6 +42,7 @@ This has all the tools and dependencies which should be used when creating a Rea
 - [React Icons](https://react-icons.github.io/react-icons) for a collection of icons from different sources (react-icons).
 - [React Router](https://reactrouter.com/web/guides/quick-start) makes routing between different pages possible (react-router-dom).
 - [JSON Server](https://github.com/typicode/json-server#getting-started) is a fake REST API for testing and mocking (json-server).
+- [Material UI](https://material-ui.com/) provides template React components (@material-ui/icons).
 
 ## Commands
 
