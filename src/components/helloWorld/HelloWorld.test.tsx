@@ -6,7 +6,7 @@ test('Hello World should say', () => {
   const headline = shallow(<HelloWorld />);
 
   // Interaction demo
-  expect(headline.text()).toEqual('Hello World');
+  expect(headline.contains('Hello World'));
 
   // Snapshot demo
   expect(headline).toMatchInlineSnapshot(`ShallowWrapper {}`);

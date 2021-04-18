@@ -44,6 +44,7 @@ This has all the tools and dependencies which should be used when creating a Rea
 - [JSON Server](https://github.com/typicode/json-server#getting-started) is a fake REST API for testing and mocking (json-server).
 - [Material UI](https://material-ui.com/) provides template React components (@material-ui/icons).
 - [GitHub Pages](https://pages.github.com/) as one way to publish the website.
+- [i18next](https://github.com/i18next/react-i18next) offers support for different languages (i18next react-i18next i18next-browser-languagedetector).
 
 ## Commands
 
