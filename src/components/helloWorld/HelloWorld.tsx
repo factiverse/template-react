@@ -7,7 +7,6 @@ const HelloWorld: React.FC = () => {
   const { t } = useTranslation();
 
   function changeLanguage(e) {
-    console.log(e.target.value);
     i18n.changeLanguage(e.target.value);
   }
 
@@ -34,7 +33,7 @@ const HelloWorld: React.FC = () => {
         />
         Norwegian
       </label>
-      <h1>{t('helloWorld')}</h1>
+      <h1 id="title">{t('helloWorld')}</h1>
     </div>
   );
 };

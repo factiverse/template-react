@@ -9,6 +9,11 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    fallbackLng: "en",
+    returnEmptyString: false,
+    interpolation: {
+      escapeValue: false // not needed for react
+    },
     resources: {
       en: {
         translation: TRANSLATIONS_EN
@@ -19,4 +24,4 @@ i18n
     }
   });
 
-i18n.changeLanguage("en"); // change language here
+i18n.changeLanguage('en');
