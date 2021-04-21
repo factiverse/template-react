@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './components/hellloWorld/HelloWorld';
+import HelloWorld from './components/helloWorld/HelloWorld';
 
 const App = () => <HelloWorld />;
 
