@@ -53,7 +53,6 @@ This has all the tools and dependencies which should be used when creating a Rea
 - ```sass --watch src/sass:css``` to watch for file changes in sass files and compile them into the css file.
 - ```npm run deploy``` produces an optimized production build in the branch "gh-pages" and publishes the website on GitHub Pages.
 - ```npm run build``` produces an optimized production build in the folder "build" which can be published in other ways.
-- ```npm run deploy``` builds and deploys the app on GitHub Pages
 
 ## Authors
 
