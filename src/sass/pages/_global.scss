@@ -1,6 +1,6 @@
 /* ----------------------------------------------
- * pages/_global.scss
- * Shortcut to import all files in /pages
- * ---------------------------------------------- */
+* pages/_global.scss
+* Shortcut to import all files in /pages
+* ---------------------------------------------- */
 
-@import "editor";
+@use "editor";

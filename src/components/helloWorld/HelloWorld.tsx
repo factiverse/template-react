@@ -6,6 +6,9 @@ import i18n from 'i18next';
 const HelloWorld: React.FC = () => {
   const { t } = useTranslation();
 
+  /**
+   * @param e
+   */
   function changeLanguage(e) {
     i18n.changeLanguage(e.target.value);
   }

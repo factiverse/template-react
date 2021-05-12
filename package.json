@@ -35,10 +35,14 @@
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
     "@babel/runtime": "^7.13.10",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.8",
     "@types/enzyme": "^3.10.8",
     "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
+    "@types/testing-library__jest-dom": "^5.9.5",
     "@types/webpack": "^4.41.26",
     "@types/webpack-dev-server": "^3.11.2",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
@@ -47,9 +51,10 @@
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.2.4",
-    "enzyme": "^3.11.0",
-    "enzyme-to-json": "^3.6.1",
     "eslint": "^7.22.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jsdoc": "^34.0.2",
+    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-webpack-plugin": "^2.5.2",
@@ -69,22 +74,26 @@
   "scripts": {
     "start": "webpack serve --config webpack.dev.config.ts",
     "build": "webpack --config webpack.prod.config.ts",
-    "test": "jest",
+    "test": "jest --coverage",
     "prepare": "husky install",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test:watch": "jest --watch --coverage",
+    "server": "json-server --watch server/db.json "
   },
   "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html"
+    ],
     "modulePaths": [
       "/shared/vendor/modules"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>src/setupEnzyme.ts"
     ],
     "moduleFileExtensions": [
       "js",
       "jsx",
-      "tsx"
+      "tsx",
+      "ts"
     ],
     "moduleDirectories": [
       "node_modules",
@@ -93,8 +102,8 @@
       "src"
     ],
     "moduleNameMapper": {
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/src/__mocks__/styleMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js",
       "^config$": "<rootDir>/configs/app-config.js"
     }
   }

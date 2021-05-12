@@ -1,3 +1,3 @@
 export const TRANSLATIONS_NO = {
-  helloWorld: "Hallo Verden",
+  helloWorld: 'Hallo Verden',
 };
