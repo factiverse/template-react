@@ -7,7 +7,7 @@ const HelloWorld: React.FC = () => {
   const { t } = useTranslation();
 
   /**
-   * @param e
+   * @param {any} e the input
    */
   function changeLanguage(e) {
     i18n.changeLanguage(e.target.value);
