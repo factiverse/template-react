@@ -1,4 +1,4 @@
-# React Tempplate
+# React Template
 
 This has all the tools and dependencies which should be used when creating a React app.
 
