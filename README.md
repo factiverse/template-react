@@ -1,4 +1,4 @@
-# React Tempplate
+# React Template
 
 This has all the tools and dependencies which should be used when creating a React app.
 
@@ -8,7 +8,7 @@ This has all the tools and dependencies which should be used when creating a Rea
 2. Clone the repository.
 3. Install [Node JS](https://nodejs.org/en/about/). The Node Package Manager ```npm``` is used to install all dependencies and runs the development server to display checkit locally in the browser.
 4. ```npm install``` within the repository folder. This installs all dependencies.
-5. Install [SASS](https://sass-lang.com/). All CSS editing should be done in the .scss files found in the sccs folder and built with SASS into main.ccs. Use the command ``sass --watch scss:css`` to compile scss files into css on changes. The .scss files are organized by:
+5. Install [SASS](https://sass-lang.com/). All CSS editing should be done in the .scss files found in the sccs folder and built with SASS into main.ccs. Use the command ``sass --watch src/sass:src/css src/components:src/css`` to compile scss files into css on changes. The .scss files are organized by:
     - Pages (specific styles for each page)
     - Components (reusable like buttons, menu bar, ...)
     - Base (fonts, colors, ...)
@@ -19,7 +19,6 @@ This has all the tools and dependencies which should be used when creating a Rea
   - [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) shows ESLint warning within VS Code.
   - [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
   - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-  - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) for rapid JavaScript / TypeScript prototyping.
   - [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) for more human-friendly comments.
   - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
   - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
@@ -37,19 +36,20 @@ This has all the tools and dependencies which should be used when creating a Rea
 - [ESLint](https://eslint.org/) lints our code (eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin).
 - [webpack](https://webpack.js.org) creates performant bundles containing our app’s JavaScript code (webpack webpack-cli @types/webpack webpack-dev-server @types/webpack-dev-server babel-loader html-webpack-plugin ts-node fork-ts-checker-webpack-plugin @types/fork-ts-checker-webpack-plugin eslint-webpack-plugin clean-webpack-plugin).
 - [Jest](https://jestjs.io/) for unit testing (jest).
-- [Enzyme](https://enzymejs.github.io/enzyme/) makes testing of React components easier (enzyme enzyme-adapter-react-16).
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) makes testing of React components easier (@testing-library/user-event @testing-library/user-event).
 - [Husky](https://typicode.github.io/husky/#/) manages Git hooks (husky).
 - [React Icons](https://react-icons.github.io/react-icons) for a collection of icons from different sources (react-icons).
 - [React Router](https://reactrouter.com/web/guides/quick-start) makes routing between different pages possible (react-router-dom).
 - [JSON Server](https://github.com/typicode/json-server#getting-started) is a fake REST API for testing and mocking (json-server).
 - [Material UI](https://material-ui.com/) provides template React components (@material-ui/icons).
 - [GitHub Pages](https://pages.github.com/) as one way to publish the website.
+- [i18next](https://github.com/i18next/react-i18next) offers support for different languages (i18next react-i18next i18next-browser-languagedetector).
 
 ## Commands
 
 - ```npm start``` to start the development server locally. It should show 'Hello World' in the browser.
-- ```npm test``` to run all tests (should pass HelloWorld.test). Or use ```npm run test -- --watch --coverage``` to run tests continually on any file change.
-- ```sass --watch src/sass:css``` to watch for file changes in sass files and compile them into the css file.
+- ```npm test``` to run all tests (should pass HelloWorld.test). Or use ```npm run test:watch``` to run tests continually on any file change.
+- ```sass --watch src/sass:src/css src/components:src/css``` to watch for file changes in sass files and compile them into the css file.
 - ```npm run deploy``` produces an optimized production build in the branch "gh-pages" and publishes the website on GitHub Pages.
 - ```npm run build``` produces an optimized production build in the folder "build" which can be published in other ways.
 

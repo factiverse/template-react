@@ -1,3 +1,3 @@
-@import "abstracts/global";
-@import "base/global";
-@import "pages/global";
+@use "abstracts/global";
+@use "base/global" as global2;
+@use "pages/global" as global3;

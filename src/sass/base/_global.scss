@@ -1,9 +1,9 @@
 /* ----------------------------------------------
- * base/_global.scss
- * Shortcut to import all files in /base
- * ---------------------------------------------- */
+* base/_global.scss
+* Shortcut to import all files in /base
+* ---------------------------------------------- */
 
-@import "general";
-@import "fonts";
-@import "animations";
-@import "typography";
+@use "general";
+@use "fonts";
+@use "animations";
+@use "typography";
