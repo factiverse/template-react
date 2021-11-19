@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -52,7 +53,7 @@ const config: webpack.Configuration = {
   ],
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'build'),
+    static: './',
     historyApiFallback: true,
     port: 4000,
     open: true,
