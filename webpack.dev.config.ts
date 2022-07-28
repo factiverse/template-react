@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import path from 'path';
 import webpack from 'webpack';
+import * as webpackDevServer from 'webpack-dev-server';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
