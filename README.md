@@ -31,20 +31,9 @@ This has all the tools and dependencies which should be used when creating a Rea
 
 ## Tools
 
-### These are installed automatically, see step 4
+Check package.md for explanations of all the packages we are using. These are installed automatically (see "Getting Started": step 4).
 
-- [React JS (Browser)](https://reactjs.org) is used to build the user interface (react react-dom).
-- [Typescript](https://www.typescriptlang.org) extends Javascript by adding types (typescript @types/react @types/react-dom).
-- [Babel](https://babeljs.io/) converts React and TypeScript code to JavaScript (@babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript @babel/plugin-transform-runtime @babel/runtime).
-- [ESLint](https://eslint.org/) lints our code (eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin).
-- [webpack](https://webpack.js.org) creates performant bundles containing our app’s JavaScript code (webpack webpack-cli @types/webpack webpack-dev-server @types/webpack-dev-server babel-loader html-webpack-plugin ts-node fork-ts-checker-webpack-plugin @types/fork-ts-checker-webpack-plugin eslint-webpack-plugin clean-webpack-plugin).
-- [Jest](https://jestjs.io/) for unit testing (jest).
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) makes testing of React components easier (@testing-library/user-event @testing-library/user-event).
-- [React Router](https://reactrouter.com/web/guides/quick-start) makes routing between different pages possible (react-router-dom).
-- [JSON Server](https://github.com/typicode/json-server#getting-started) is a fake REST API for testing and mocking (json-server).
 - [Material UI](https://material-ui.com/) provides template React components (@material-ui/icons).
-- [GitHub Pages](https://pages.github.com/) as one way to publish the website.
-- [i18next](https://github.com/i18next/react-i18next) offers support for different languages (i18next react-i18next i18next-browser-languagedetector).
 
 ## Commands
 

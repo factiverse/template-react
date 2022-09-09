@@ -12,7 +12,6 @@
     "@typescript-eslint",
     "react-hooks",
     "@babel",
-    "jsdoc",
     "jest",
     "prettier"
   ],
@@ -22,11 +21,11 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:jsdoc/recommended",
     "plugin:jest/recommended",
     "plugin:prettier/recommended"
   ],
   "rules": {
+    "require-jsdoc" : 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
@@ -36,7 +35,6 @@
     "jest/no-identical-title": "error",
     "jest/prefer-to-have-length": "warn",
     "jest/valid-expect": "error",
-    "valid-jsdoc": "off",
     "comma-dangle": [ "error", { "arrays": "always-multiline", "objects": "always-multiline", "imports": "always-multiline", "exports": "always-multiline", "functions": "never" } ],
     "prettier/prettier": "error",
     "jest/no-restricted-matchers": [
@@ -45,17 +43,7 @@
         "toThrowErrorMatchingSnapshot": "Use `toThrowErrorMatchingInlineSnapshot()` instead",
         "toMatchSnapshot": "Use `toMatchInlineSnapshot()` instead"
       }
-    ],
-    "jsdoc/require-hyphen-before-param-description": ["error", "never"],
-    "jsdoc/check-tag-names": "error",
-    "jsdoc/check-param-names": "error",
-    "jsdoc/require-param-description": "error",
-    "jsdoc/require-param-name": "error",
-    "jsdoc/require-param-type": "error",
-    "jsdoc/require-param": "error",
-    "jsdoc/require-returns-description": "error",
-    "jsdoc/require-returns-type": "error",
-    "jsdoc/require-returns": "error"
+    ]
   },
   "env": {
     "es6": true,
@@ -69,18 +57,6 @@
     "react": {
       "pragma": "React",
       "version": "detect"
-    },
-    "jsdoc": {
-      
-      "return": "returns",
-      "constructor": "constructor",
-      "prop": "property",
-      "arg": "param",
-      "augments": "extends",
-      "description": false,
-      "desc": false,
-      "inheritdoc": false,
-      "class": false
     },
     "overrideReplacesDocs": false
   }
