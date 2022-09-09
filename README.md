@@ -37,9 +37,14 @@ Check package.md for explanations of all the packages we are using. These are in
 
 ## Commands
 
+- `npm start:dev` runs all commands necessary for development, or you can run them individually:
 - `npm start` to start the development server locally. It should show 'Hello World' in the browser.
-- `npm test` to run all tests (should pass HelloWorld.test). Or use `npm run test:watch` to run tests continually on any file change.
 - `sass --watch src/sass:src/css src/components:src/css` to watch for file changes in sass files and compile them into the css file.
+- `npm run server` serves `server/db.json` locally to mock APIs
+
+### Other
+
+- `npm test` to run all tests (should pass HelloWorld.test). Or use `npm run test:watch` to run tests continually on any file change.
 - `npm run deploy` produces an optimized production build in the branch "gh-pages" and publishes the website on GitHub Pages.
 - `npm run build` produces an optimized production build in the folder "build" which can be published in other ways.
 
