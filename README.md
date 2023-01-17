@@ -1,7 +1,7 @@
 # React Template
 
-This has all the tools and dependencies which should be used when creating a React app.
-**Please contact [Tobias Tykvart](https://github.com/tobiastykvart) before creating a new repository from this template**, some dependencies might have to be updated first.
+This has some basic tools and dependencies which can be used when creating a React app.
+**Feel free to contact [Tobias Tykvart](https://github.com/tobiastykvart) with any questions when creating a new repository from this template**
 
 ## Getting Started
 
