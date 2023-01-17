@@ -8,6 +8,8 @@ The goals of this document are:
 ## Dependencies
 
 - 'react react-dom' - [React JS (Browser)](https://reactjs.org) is used to build the user interface
+- '@mui/material @emotion/react @emotion/styled' - [Material UI](https://mui.com/) is a library of React UI components that implements Google's Material Design, styling is done wIth [Emotion](https://emotion.sh/docs/introduction)
+
 - 'react-router-dom' - [React Router](https://reactrouter.com/web/guides/quick-start) makes routing between different pages possible
 - 'i18next, i18next-browser-languagedetector, react-i18next' - internationalization of the UI with [i18next](https://github.com/i18next/react-i18next)
 

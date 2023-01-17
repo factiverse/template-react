@@ -37,6 +37,7 @@
     "jest/valid-expect": "error",
     "comma-dangle": [ "error", { "arrays": "always-multiline", "objects": "always-multiline", "imports": "always-multiline", "exports": "always-multiline", "functions": "never" } ],
     "prettier/prettier": "error",
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
     "jest/no-restricted-matchers": [
       "error",
       {
