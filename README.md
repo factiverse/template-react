@@ -1,7 +1,7 @@
 # React Template
 
-This has all the tools and dependencies which should be used when creating a React app.
-**Please contact [Tobias Tykvart](https://github.com/tobiastykvart) before creating a new repository from this template**, some dependencies might have to be updated first.
+This has some basic tools and dependencies which can be used when creating a React app.
+**Feel free to contact [Tobias Tykvart](https://github.com/tobiastykvart) with any questions when creating a new repository from this template**
 
 ## Getting Started
 
@@ -9,12 +9,16 @@ This has all the tools and dependencies which should be used when creating a Rea
 2. Clone the repository.
 3. Install [Node JS](https://nodejs.org/en/about/). The Node Package Manager `npm` is used to install all dependencies and runs the development server to display checkit locally in the browser.
 4. `npm install` within the repository folder. This installs all dependencies.
-5. Install [SASS](https://sass-lang.com/). All CSS editing should be done in the .scss files found in the sccs folder and built with SASS into main.ccs. Use the command `sass --watch src/sass:src/css src/components:src/css` to compile scss files into css on changes. The .scss files are organized by:
-   - Pages (specific styles for each page)
-   - Components (reusable like buttons, menu bar, ...)
-   - Base (fonts, colors, ...)
-   - Abstracts (functions, variables, mixins, ...)
-   - global.scss files to import everything of one category
+5. Use either SASS or Emotion for styling:
+
+- Install [SASS](https://sass-lang.com/). CSS editing should be done in the .scss files found in the sccs folder and built with SASS into main.ccs. Use the command `sass --watch src/sass:src/css src/components:src/css` to compile scss files into css on changes. The .scss files are organized by:
+  - Pages (specific styles for each page)
+  - Components (reusable like buttons, menu bar, ...)
+  - Base (fonts, colors, ...)
+  - Abstracts (functions, variables, mixins, ...)
+  - global.scss files to import everything of one category
+- [Emotion](https://emotion.sh/docs/introduction) is already installed and ready to go. Use the css prop to style elements.
+
 6. Recommended code editor and useful plugins:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -31,26 +35,20 @@ This has all the tools and dependencies which should be used when creating a Rea
 
 ## Tools
 
-### These are installed automatically, see step 4
+Check package.md for explanations of all the packages we are using. These are installed automatically (see "Getting Started": step 4).
 
-- [React JS (Browser)](https://reactjs.org) is used to build the user interface (react react-dom).
-- [Typescript](https://www.typescriptlang.org) extends Javascript by adding types (typescript @types/react @types/react-dom).
-- [Babel](https://babeljs.io/) converts React and TypeScript code to JavaScript (@babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript @babel/plugin-transform-runtime @babel/runtime).
-- [ESLint](https://eslint.org/) lints our code (eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin).
-- [webpack](https://webpack.js.org) creates performant bundles containing our app’s JavaScript code (webpack webpack-cli @types/webpack webpack-dev-server @types/webpack-dev-server babel-loader html-webpack-plugin ts-node fork-ts-checker-webpack-plugin @types/fork-ts-checker-webpack-plugin eslint-webpack-plugin clean-webpack-plugin).
-- [Jest](https://jestjs.io/) for unit testing (jest).
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) makes testing of React components easier (@testing-library/user-event @testing-library/user-event).
-- [React Router](https://reactrouter.com/web/guides/quick-start) makes routing between different pages possible (react-router-dom).
-- [JSON Server](https://github.com/typicode/json-server#getting-started) is a fake REST API for testing and mocking (json-server).
 - [Material UI](https://material-ui.com/) provides template React components (@material-ui/icons).
-- [GitHub Pages](https://pages.github.com/) as one way to publish the website.
-- [i18next](https://github.com/i18next/react-i18next) offers support for different languages (i18next react-i18next i18next-browser-languagedetector).
 
 ## Commands
 
+- `npm start:dev` runs all commands necessary for development, or you can run them individually:
 - `npm start` to start the development server locally. It should show 'Hello World' in the browser.
-- `npm test` to run all tests (should pass HelloWorld.test). Or use `npm run test:watch` to run tests continually on any file change.
 - `sass --watch src/sass:src/css src/components:src/css` to watch for file changes in sass files and compile them into the css file.
+- `npm run server` serves `server/db.json` locally to mock APIs
+
+### Other
+
+- `npm test` to run all tests (should pass HelloWorld.test). Or use `npm run test:watch` to run tests continually on any file change.
 - `npm run deploy` produces an optimized production build in the branch "gh-pages" and publishes the website on GitHub Pages.
 - `npm run build` produces an optimized production build in the folder "build" which can be published in other ways.
 

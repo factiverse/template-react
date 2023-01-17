@@ -6,9 +6,6 @@ import i18n from 'i18next';
 const HelloWorld: React.FC = () => {
   const { t } = useTranslation();
 
-  /**
-   * @param {any} e the input
-   */
   function changeLanguage(e) {
     i18n.changeLanguage(e.target.value);
   }
@@ -36,7 +33,7 @@ const HelloWorld: React.FC = () => {
         />
         Norwegian
       </label>
-      <h1 id="title">{t('helloWorld')}</h1>
+      <h2 id="title">{t('helloWorld')}</h2>
     </div>
   );
 };
