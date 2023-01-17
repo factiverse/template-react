@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import HelloWorld from '../helloWorld/HelloWorld';
 import { css } from '@emotion/react';
+import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 
 const App = () => {
   // json-server example:
@@ -19,36 +20,50 @@ const App = () => {
     fetchData();
   }, []);
 
-  const color = 'white';
-
   return (
     <>
+      <h1>Check App.tsx for feature examples:</h1>
+      <br></br>
+      {/* Component/localization example */}
       <HelloWorld />
+      <br></br>
       {/* Material UI example */}
-      <Typography>Material UI Typography</Typography>
+      <Typography>Use Material UI components to quickly build UI</Typography>
+      <br></br>
       {/* Emotion example */}
       <div
         css={css`
-          padding: 32px;
-          background-color: hotpink;
-          font-size: 24px;
-          border-radius: 4px;
+          background-color: darkgreen;
+          color: white;
           &:hover {
-            color: ${color};
+            background-color: hotpink;
           }
         `}
       >
-        Hover to change color.
+        Use Emotion to style elements: Hover to change color.
       </div>
+      <br></br>
       {/* react-router-dom example */}
       <div>
-        <Link to="/RouterTest">react-dom-router test</Link>
+        <Link to="/RouterTest">
+          Route to different pages with react-dom-router
+        </Link>
       </div>
+      <br></br>
       {/* json-server example */}
-      <div>Author from db.json: {exampleData}</div>
+      <div>
+        Mock an API by using db.json and running a local server with{' '}
+        <b>npm run server</b>: {exampleData}
+      </div>
+      <br></br>
       {/* icons example using https://phosphoricons.com/ */}
       <div>
-        <i className="ph-alien-light" style={{ color: 'hotpink' }}></i>
+        Use Phosphor icons or{' '}
+        <a href="https://mui.com/material-ui/material-icons/">
+          Matrial UI icons
+        </a>
+        :<i className="ph-alien-light" style={{ color: 'hotpink' }}></i>
+        <AccessAlarmIcon />
       </div>
     </>
   );

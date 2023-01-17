@@ -33,7 +33,7 @@ const HelloWorld: React.FC = () => {
         />
         Norwegian
       </label>
-      <h1 id="title">{t('helloWorld')}</h1>
+      <h2 id="title">{t('helloWorld')}</h2>
     </div>
   );
 };

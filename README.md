@@ -9,12 +9,16 @@ This has all the tools and dependencies which should be used when creating a Rea
 2. Clone the repository.
 3. Install [Node JS](https://nodejs.org/en/about/). The Node Package Manager `npm` is used to install all dependencies and runs the development server to display checkit locally in the browser.
 4. `npm install` within the repository folder. This installs all dependencies.
-5. Install [SASS](https://sass-lang.com/). All CSS editing should be done in the .scss files found in the sccs folder and built with SASS into main.ccs. Use the command `sass --watch src/sass:src/css src/components:src/css` to compile scss files into css on changes. The .scss files are organized by:
-   - Pages (specific styles for each page)
-   - Components (reusable like buttons, menu bar, ...)
-   - Base (fonts, colors, ...)
-   - Abstracts (functions, variables, mixins, ...)
-   - global.scss files to import everything of one category
+5. Use either SASS or Emotion for styling:
+
+- Install [SASS](https://sass-lang.com/). CSS editing should be done in the .scss files found in the sccs folder and built with SASS into main.ccs. Use the command `sass --watch src/sass:src/css src/components:src/css` to compile scss files into css on changes. The .scss files are organized by:
+  - Pages (specific styles for each page)
+  - Components (reusable like buttons, menu bar, ...)
+  - Base (fonts, colors, ...)
+  - Abstracts (functions, variables, mixins, ...)
+  - global.scss files to import everything of one category
+- [Emotion](https://emotion.sh/docs/introduction) is already installed and ready to go. Use the css prop to style elements.
+
 6. Recommended code editor and useful plugins:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
