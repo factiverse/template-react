@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "Unlicensed",
   "author": "Tobias Tykvart",
-  "homepage": "http://factiverse.github.io/template-react",
+  "homepage": "https://factiverse.github.io/template-react/",
   "scripts": {
     "build": "webpack --config webpack.prod.config.ts",
     "predeploy": "npm run build",

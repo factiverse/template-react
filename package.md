@@ -12,6 +12,7 @@ The goals of this document are:
 
 - 'react-router-dom' - [React Router](https://reactrouter.com/web/guides/quick-start) makes routing between different pages possible
 - 'i18next, i18next-browser-languagedetector, react-i18next' - internationalization of the UI with [i18next](https://github.com/i18next/react-i18next)
+- '@auth0/auth0-react' - [Auth0](https://developer.auth0.com/resources/guides/spa/react/basic-authentication#quick-react-setup) setup for token authentication
 
 ## DevDependencies
 
