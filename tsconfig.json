@@ -19,5 +19,6 @@
       "node_modules/@types"
     ]
   },
-  "include": ["src", "../jest.config.js", "jest.config.js"]
+  "include": ["src", "../jest.config.js", "jest.config.js"],
+  "exclude": ["node_modules", "build"] // *** The files to not type check ***
 }

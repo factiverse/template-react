@@ -1,0 +1,7 @@
+{
+  "domain": "dev-on-lc56a.us.auth0.com",
+  "clientId": "zH4UIKj7QTplHQ2S8wtdoxS2CFS0xgYO",
+  "redirectUri": "http://localhost:4000",
+  "audience": "https://factiverse/api",
+  "scope": "openid profile email post:claim_search post:stance_detection post:search"
+}

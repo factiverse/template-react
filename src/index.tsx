@@ -1,16 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import * as ReactDOMClient from 'react-dom/client';
 import App from './components/App/App';
+import { Auth0ProviderWithNavigate } from './services/Auth/Auth0ProviderWithNavigate';
+import { HashRouter as Router } from 'react-router-dom';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+
+// Create a root.
+const root = ReactDOMClient.createRoot(container as Element);
+
+root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="RouterTest" element={<div>This is a routed page</div>} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Router>
+      <Auth0ProviderWithNavigate>
+        <App />
+      </Auth0ProviderWithNavigate>
+    </Router>
+  </React.StrictMode>
 );
