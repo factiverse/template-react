@@ -12,16 +12,16 @@ i18n
     fallbackLng: 'en',
     returnEmptyString: false,
     interpolation: {
-      escapeValue: false, // not needed for react
+      escapeValue: false // not needed for react
     },
     resources: {
       en: {
-        translation: TRANSLATIONS_EN,
+        translation: TRANSLATIONS_EN
       },
       no: {
-        translation: TRANSLATIONS_NO,
-      }, // add other translations here
-    },
+        translation: TRANSLATIONS_NO
+      } // add other translations here
+    }
   });
 
 i18n.changeLanguage('en');

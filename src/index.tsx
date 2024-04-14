@@ -11,7 +11,6 @@ const root = ReactDOMClient.createRoot(container as Element);
 
 root.render(
   <React.StrictMode>
-    {/* Use if deployed to Github Pages: <Router basename="/template-react"> */}
     <Router>
       <Auth0ProviderWithNavigate>
         <App />

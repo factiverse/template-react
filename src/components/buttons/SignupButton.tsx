@@ -7,11 +7,11 @@ const SignupButton: React.FC = () => {
   const handleSignUp = async () => {
     await loginWithRedirect({
       appState: {
-        returnTo: '/',
+        returnTo: '/'
       },
       authorizationParams: {
-        screen_hint: 'signup',
-      },
+        screen_hint: 'signup'
+      }
     });
   };
 

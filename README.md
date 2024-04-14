@@ -9,17 +9,9 @@ This has some basic tools and dependencies which can be used when creating a Rea
 2. Clone the repository.
 3. Install [Node JS](https://nodejs.org/en/about/). The Node Package Manager `npm` is used to install all dependencies and runs the development server to display checkit locally in the browser.
 4. `npm install` within the repository folder. This installs all dependencies.
-5. Use either SASS or Emotion for styling:
-
-- Install [SASS](https://sass-lang.com/). CSS editing should be done in the .scss files found in the sccs folder and built with SASS into main.ccs. Use the command `sass --watch src/sass:src/css src/components:src/css` to compile scss files into css on changes. The .scss files are organized by:
-  - Pages (specific styles for each page)
-  - Components (reusable like buttons, menu bar, ...)
-  - Base (fonts, colors, ...)
-  - Abstracts (functions, variables, mixins, ...)
-  - global.scss files to import everything of one category
-- [Emotion](https://emotion.sh/docs/introduction) is already installed and ready to go. Use the css prop to style elements.
-
-6. Recommended code editor and useful plugins:
+5. Use [Emotion](https://emotion.sh/docs/introduction) for styling, it is already installed and ready to go. Use the css prop to style elements.
+6. Run `npm start:dev` to start the json-server and dev web server and visit `localhost:4000` in your browser to see the app.
+7. Recommended code editor and useful plugins:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) shows ESLint warning within VS Code.
@@ -43,7 +35,6 @@ Check package.md for explanations of all the packages we are using. These are in
 
 - `npm start:dev` runs all commands necessary for development, or you can run them individually:
 - `npm start` to start the development server locally. It should show 'Hello World' in the browser.
-- `sass --watch src/sass:src/css src/components:src/css` to watch for file changes in sass files and compile them into the css file.
 - `npm run server` serves `server/db.json` locally to mock APIs
 
 ### Other

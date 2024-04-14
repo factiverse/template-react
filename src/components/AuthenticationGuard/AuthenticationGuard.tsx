@@ -3,7 +3,7 @@ import React from 'react';
 
 export const AuthenticationGuard = ({ component }) => {
   const Component = withAuthenticationRequired(component, {
-    onRedirecting: () => <p>is loading...</p>,
+    onRedirecting: () => <p>is loading...</p>
   });
 
   return <Component />;

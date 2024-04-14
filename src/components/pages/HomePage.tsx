@@ -16,7 +16,7 @@ const HomePage = () => {
     async function fetchData() {
       const data = await (
         await fetch('http://localhost:3000/posts', {
-          method: 'GET',
+          method: 'GET'
         })
       ).json();
       setExampleData(data[0].author);
