@@ -6,30 +6,22 @@ import authConfig from '../../authConfig.json';
 export const Auth0ProviderWithNavigate = ({ children }) => {
   const navigate = useNavigate();
 
-  const domain = authConfig.domain;
-  const clientId = authConfig.clientId;
-  const redirectUri = authConfig.redirectUri;
-  const audience = authConfig.audience;
-  const scope = authConfig.scope;
-
   const onRedirectCallback = (appState) => {
     navigate(appState?.returnTo || window.location.pathname);
   };
 
-  if (!(domain && clientId && redirectUri)) {
-    return null;
-  }
-
   return (
     <Auth0Provider
-      domain={domain}
-      clientId={clientId}
+      domain={authConfig.domain}
+      clientId={authConfig.clientId}
       authorizationParams={{
-        redirect_uri: redirectUri,
-        scope: scope,
-        audience: audience
+        redirect_uri: authConfig.redirectUri,
+        scope: authConfig.scope,
+        audience: authConfig.audience
       }}
       onRedirectCallback={onRedirectCallback}
+      useRefreshTokens={true}
+      cacheLocation="memory"
     >
       {children}
     </Auth0Provider>

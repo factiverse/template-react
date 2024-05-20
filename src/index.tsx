@@ -3,6 +3,7 @@ import * as ReactDOMClient from 'react-dom/client';
 import App from './components/App/App';
 import { Auth0ProviderWithNavigate } from './services/Auth/Auth0ProviderWithNavigate';
 import { BrowserRouter as Router } from 'react-router-dom';
+import APIWrapper from './utils/APIWrapper';
 
 const container = document.getElementById('root');
 
@@ -13,7 +14,9 @@ root.render(
   <React.StrictMode>
     <Router>
       <Auth0ProviderWithNavigate>
-        <App />
+        <APIWrapper>
+          <App />
+        </APIWrapper>
       </Auth0ProviderWithNavigate>
     </Router>
   </React.StrictMode>

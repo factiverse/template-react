@@ -8,7 +8,7 @@ import ProfilePage from '../pages/ProfilePage';
 
 const App = () => {
   // display loading page while Auth0 is authenticating the user
-  const { isLoading } = useAuth0();
+  const { isLoading, isAuthenticated } = useAuth0();
   if (isLoading) {
     return (
       <div className="page-layout">
@@ -22,11 +22,22 @@ const App = () => {
       <Route path="RouterTest" element={<div>This is a routed page</div>} />
       <Route
         path="/profile"
-        element={<AuthenticationGuard component={ProfilePage} />}
+        element={
+          <AuthenticationGuard isAllowed={isAuthenticated} returnTo="/profile">
+            <ProfilePage />
+          </AuthenticationGuard>
+        }
       />
       <Route
-        path="Protected"
-        element={<AuthenticationGuard component={LoadingPage} />}
+        path="/protected"
+        element={
+          <AuthenticationGuard
+            isAllowed={isAuthenticated}
+            returnTo="/protected"
+          >
+            <LoadingPage />
+          </AuthenticationGuard>
+        }
       />
       <Route path="*" element={<div>Not found</div>} />
     </Routes>

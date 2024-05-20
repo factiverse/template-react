@@ -14,12 +14,16 @@ const HomePage = () => {
   const [exampleData, setExampleData] = useState('');
   useEffect(() => {
     async function fetchData() {
-      const data = await (
-        await fetch('http://localhost:3000/posts', {
-          method: 'GET'
-        })
-      ).json();
-      setExampleData(data[0].author);
+      try {
+        const data = await (
+          await fetch('http://localhost:3000/posts', {
+            method: 'GET'
+          })
+        ).json();
+        setExampleData(data[0].author);
+      } catch (e) {
+        console.error("json-server isn't running. Use `npm run start:dev`");
+      }
     }
     fetchData();
   }, []);
