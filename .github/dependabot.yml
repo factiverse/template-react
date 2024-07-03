@@ -9,8 +9,22 @@ updates:
     directory: '/' # Location of package manifests
     schedule:
       interval: 'monthly'
+    groups:
+      production-dependencies:
+        dependency-type: 'production'
+      development-dependencies:
+        dependency-type: 'development'
 groups:
   production-dependencies:
     dependency-type: 'production'
+    labels:
+      - 'dependencies'
+      - 'production'
   development-dependencies:
     dependency-type: 'development'
+    labels:
+      - 'dependencies'
+      - 'development'
+    reviewers:
+      - 'your-github-username'
+
